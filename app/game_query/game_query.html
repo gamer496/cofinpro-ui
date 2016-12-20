@@ -1,0 +1,10 @@
+<form>
+	User_ID: <input type = "text" ng-model = "user_id">
+	Search Query: <input type = "text" ng-model = "content">
+
+	<input type = "submit" value = "submit" ng-click = "submitTry()">
+
+	<ul ng-show = "doShow">
+		<li ng-repeat = "data in datas">{{data}}</li>
+	</ul>
+</form>
