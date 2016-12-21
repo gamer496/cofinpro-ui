@@ -4,7 +4,11 @@ app.controller("gameQueryController", function($scope, $rootScope, $log, $locati
 
 	var successCallBack = function(response){
 		var data = response.data["datas"];
-		$scope.datas = data;
+		s = new Set();
+		for(var i = 0; i < data.length; i++){
+			s.add(data[i]);
+		}
+		$scope.datas = Array.from(s);
 		$scope.doShow = true;
 		$log.info(response);
 	};
