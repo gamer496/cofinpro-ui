@@ -15,7 +15,7 @@ app.controller("gameQueryController", function($scope, $rootScope, $log, $locati
 	};
 
 	var getData = function(){
-		return {user_id: $scope.user_id, content: $scope.content};
+		return {user: $scope.user, content: $scope.content};
 	};
 
 	$scope.submitTry = function(){
